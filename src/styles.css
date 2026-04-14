@@ -1,0 +1,94 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+@import url('https://fonts.googleapis.com/css2?family=Bayon&display=swap');
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-gym-yellow: var(--gym-yellow);
+  --color-gym-yellow-60: var(--gym-yellow-60);
+  --color-gym-yellow-30: var(--gym-yellow-30);
+  --color-gym-dark: var(--gym-dark);
+  --color-gym-dark-card: var(--gym-dark-card);
+  --color-gym-dark-surface: var(--gym-dark-surface);
+  --color-gym-dark-border: var(--gym-dark-border);
+  --color-gym-light: var(--gym-light);
+  --color-gym-body: var(--gym-body);
+  --color-gym-black: var(--gym-black);
+  --font-bayon: 'Bayon', sans-serif;
+}
+
+:root {
+  --radius: 0.625rem;
+  --gym-yellow: #ffdf41;
+  --gym-yellow-60: #ffdf4199;
+  --gym-yellow-30: #ffdf414d;
+  --gym-dark: #121212;
+  --gym-dark-card: #1f1f1f;
+  --gym-dark-surface: #25282b;
+  --gym-dark-border: #393939;
+  --gym-light: #d5d2cd;
+  --gym-body: #d5d2cd;
+  --gym-black: #070504;
+  --gym-white: #fff;
+  --gym-white-5: #ffffff05;
+
+  --background: #121212;
+  --foreground: #fff;
+  --card: #1f1f1f;
+  --card-foreground: #fff;
+  --popover: #1f1f1f;
+  --popover-foreground: #fff;
+  --primary: #ffdf41;
+  --primary-foreground: #070504;
+  --secondary: #25282b;
+  --secondary-foreground: #d5d2cd;
+  --muted: #25282b;
+  --muted-foreground: #d5d2cd;
+  --accent: #393939;
+  --accent-foreground: #fff;
+  --destructive: #ef4444;
+  --destructive-foreground: #fff;
+  --border: #393939;
+  --input: #393939;
+  --ring: #ffdf41;
+}
+
+@layer base {
+  * {
+    border-color: var(--color-border);
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    font-family: sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-bayon);
+  }
+}
